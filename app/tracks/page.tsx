@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
 type Track = {
@@ -107,9 +108,10 @@ export default function TracksPage() {
       ) : (
         <div className="flex flex-col gap-2">
           {tracks.map((track) => (
-            <div
+            <Link
               key={track.id}
-              className="flex items-center justify-between rounded-lg border border-white/[0.06] bg-[#111114] px-4 py-3.5 transition-colors hover:border-white/[0.1]"
+              href={`/tracks/${track.id}`}
+              className="flex items-center justify-between rounded-lg border border-white/[0.06] bg-[#111114] px-4 py-3.5 transition-colors hover:border-violet-500/30 hover:bg-[#131316]"
             >
               <span className="text-[13px] font-medium text-[#f0f0f3]">
                 {track.title}
@@ -117,7 +119,7 @@ export default function TracksPage() {
               <span className="ml-4 shrink-0 text-[11px] text-[#4a4a56]">
                 {formatDate(track.created_at)}
               </span>
-            </div>
+            </Link>
           ))}
         </div>
       )}
