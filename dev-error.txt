@@ -1,0 +1,9 @@
+C:\Desktop\LearningOS\node_modules\next\dist\server\config.js:787
+            throw new Error(`Configuring Next.js via '${(0, _path.basename)(nonJsPath)}' is not supported. Please replace the file with 'next.config.js' or 'next.config.mjs'.`);
+                  ^
+
+Error: Configuring Next.js via 'next.config.ts' is not supported. Please replace the file with 'next.config.js' or 'next.config.mjs'.
+    at loadConfig (C:\Desktop\LearningOS\node_modules\next\dist\server\config.js:787:19)
+    at async Module.nextDev (C:\Desktop\LearningOS\node_modules\next\dist\cli\next-dev.js:175:14)
+
+Node.js v24.14.0
